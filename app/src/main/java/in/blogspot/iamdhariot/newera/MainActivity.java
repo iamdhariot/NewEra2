@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
     /***
      * UI stuffs
      */
-
     private Button btnSpeech;
     private EditText textView;
 
