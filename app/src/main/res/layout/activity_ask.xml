@@ -159,6 +159,31 @@
 
 
 
+                <ProgressBar
+
+                    android:visibility="gone"
+
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="bottom|center" />
+                <TextView
+
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="@color/lightGray"
+                    android:text="Saving..."
+                    android:id="@+id/wait"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    />
+
 
             </LinearLayout>
 

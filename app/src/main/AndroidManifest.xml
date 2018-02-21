@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="in.blogspot.iamdhariot.newera">
 
     <application
@@ -10,8 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/noActionbarFullScreen">
         <activity
+            android:resizeableActivity="false"
             android:name=".SplashActivity"
-            android:theme="@style/splashScreenTheme">
+            android:screenOrientation="portrait"
+            android:theme="@style/splashScreenTheme"
+            tools:targetApi="n">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,29 +23,90 @@
             </intent-filter>
         </activity>
         <activity
+            tools:targetApi="n"
+            android:resizeableActivity="false"
             android:name=".SignInActivity"
-            android:theme="@style/noActionbarFullScreen" />
+            android:screenOrientation="portrait"
+           />
         <activity
+            tools:targetApi="n"
+            android:resizeableActivity="false"
             android:name=".SignUpActivity"
-            android:theme="@style/noActionbarFullScreen" />
+            android:screenOrientation="portrait"
+            />
         <activity
+            tools:targetApi="n"
+            android:resizeableActivity="false"
             android:name=".StartActivity"
-            android:theme="@style/noActionbarFullScreen" />
+            android:screenOrientation="portrait"
+            />
         <activity
+            tools:targetApi="n"
+            android:resizeableActivity="false"
             android:name=".AskActivity"
-            android:theme="@style/noActionbarFullScreen" />
-        <activity android:name=".QuestionCategoriesActivity" />
-        <activity android:name=".TestCategoriesActivity" />
-        <activity android:name=".QuestionProgramingCataActivity" />
-        <activity android:name=".TestProgramingCataActivity" />
-        <activity android:name=".QuestionBoardActivity" />
-        <activity android:name=".ResultActivity" />
-        <activity android:name=".QuestionAnsActivity" />
-        <activity android:name=".CheckDatabaseHaveUserData" />
-        <activity android:name=".ChoicesActivity" />
-        <activity android:name=".TestBoardActivity" />
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".ProfileActivity"></activity>
+            android:screenOrientation="portrait"
+          />
+        <activity android:name=".QuestionCategoriesActivity"
+            tools:targetApi="n"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".TestCategoriesActivity"
+            tools:targetApi="n"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".QuestionProgramingCataActivity"
+            tools:targetApi="n"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".TestProgramingCataActivity"
+            tools:targetApi="n"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".QuestionBoardActivity"
+            tools:targetApi="n"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ResultActivity"
+            tools:targetApi="n"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".QuestionAnsActivity"
+            tools:targetApi="n"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".CheckDatabaseHaveUserData"
+            tools:targetApi="n"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ChoicesActivity"
+            tools:targetApi="n"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".TestBoardActivity"
+            tools:targetApi="n"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".AboutActivity"
+            tools:targetApi="n"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ProfileActivity"
+            tools:targetApi="n"
+            android:resizeableActivity="false"
+
+            android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>

@@ -17,30 +17,6 @@ android:orientation="vertical"
             android:layout_height="match_parent"
            >
 
-            <ProgressBar
-
-                android:layout_marginTop="40dp"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:id="@+id/progressBar"
-                style="?android:attr/progressBarStyle"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="bottom" />
-            <TextView
-
-                android:layout_margin="10dp"
-                android:textSize="18sp"
-                android:gravity="center"
-                android:textColor="@color/lightGray"
-                android:text="Please wait..."
-                android:id="@+id/wait"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/progressBar"
-
-                />
-
             <LinearLayout
                 android:id="@+id/layout"
                 android:visibility="gone"
@@ -65,7 +41,7 @@ android:orientation="vertical"
                     android:layout_gravity="center"
                     android:minHeight="250dp"
                     android:minWidth="250dp"
-                    android:scaleType="centerCrop"
+                    android:scaleType="fitCenter"
                     android:src="@mipmap/newera" />
 
                 <LinearLayout
@@ -206,6 +182,31 @@ android:orientation="vertical"
                 </LinearLayout>
 
             </LinearLayout>
+
+            <ProgressBar
+
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom" />
+            <TextView
+
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/lightGray"
+                android:text="Please wait..."
+                android:id="@+id/wait"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progressBar"
+
+                />
+
 
 
 

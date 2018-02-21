@@ -16,5 +16,6 @@
     <color name="custom">#ccb3d1e9</color>
     <color name="green">#0fe263</color>
     <color name="transpreant">#00ff3232</color>
+    <color name="bluedark">#263238</color>
 
 </resources>

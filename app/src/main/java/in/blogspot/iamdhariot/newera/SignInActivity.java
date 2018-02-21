@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,11 +41,12 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
      * UI stuffs declaration
      */
     private Button signInBtn;
-    private TextView signUpText, errorTextEmail, errorTextPassword;
+    private TextView signUpText, errorTextEmail, errorTextPassword,waitText;
     private EditText emailETView, passwordETView;
 
     private RelativeLayout layout;
     private LinearLayout google;
+    private ProgressBar progressBar;
 
 
     /**
@@ -67,8 +69,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
          *  UI stuffs reference
          * */
         google = (LinearLayout) findViewById(R.id.google);
-
-
         emailETView = (EditText) findViewById(R.id.emailETView);
         passwordETView = (EditText) findViewById(R.id.passwordETView);
         signInBtn = (Button) findViewById(R.id.signinBtn);
@@ -76,6 +76,8 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         errorTextEmail = (TextView) findViewById(R.id.errorTextEmail);
         errorTextPassword = (TextView) findViewById(R.id.errorTextPassword);
         layout = (RelativeLayout) findViewById(R.id.layout);
+        progressBar = (ProgressBar)findViewById(R.id.progressBar);
+        waitText = (TextView)findViewById(R.id.wait);
 
 
         /**
@@ -284,6 +286,10 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             errorTextEmail.setVisibility(View.GONE);
             emailETView.setBackground(getResources().getDrawable(R.drawable.editviewbackground_two));
             passwordETView.setBackground(getResources().getDrawable(R.drawable.editviewbackground_two));
+            signInBtn.setVisibility(View.GONE);
+            signUpText.setVisibility(View.GONE);
+            progressBar.setVisibility(View.VISIBLE);
+            waitText.setVisibility(View.VISIBLE);
 
 
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -291,12 +297,24 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
 
-                        startActivity(new Intent(SignInActivity.this, AskActivity.class));
+                        TransitionManager.beginDelayedTransition(layout);
+                        progressBar.setVisibility(View.GONE);
+                        waitText.setVisibility(View.GONE);
+                        signInBtn.setVisibility(View.VISIBLE);
+                        signUpText.setVisibility(View.VISIBLE);
+                        startActivity(new Intent(SignInActivity.this, CheckDatabaseHaveUserData.class));
+                        finishAffinity();
                         // mAuth.getCurrentUser().isEmailVerified();
 
                     } else {
                         //display some here
 
+                        TransitionManager.beginDelayedTransition(layout);
+
+                        progressBar.setVisibility(View.GONE);
+                        waitText.setVisibility(View.GONE);
+                        signInBtn.setVisibility(View.VISIBLE);
+                        signUpText.setVisibility(View.VISIBLE);
                         Toast.makeText(SignInActivity.this, "Please enter valid email and/or password...", Toast.LENGTH_SHORT).show();
 
                     }

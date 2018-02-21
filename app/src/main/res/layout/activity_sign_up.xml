@@ -96,6 +96,7 @@
 
                 <EditText
 
+                    android:inputType="textEmailAddress"
                     android:textColor="@color/lightGray"
                     android:id="@+id/emailETView"
                     android:background="@drawable/editviewbackground_two"
@@ -191,6 +192,7 @@
 
 
                 <Button
+                    android:visibility="visible"
                     android:id="@+id/signupBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -215,6 +217,31 @@
                     android:text="Already have an account? Signin here"
                     android:textAlignment="center"
                     android:textSize="16sp" />
+                <ProgressBar
+
+                    android:visibility="gone"
+
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="bottom|center" />
+                <TextView
+
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="@color/lightGray"
+                    android:text="Signing up..."
+                    android:id="@+id/wait"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    />
+
 
 
 

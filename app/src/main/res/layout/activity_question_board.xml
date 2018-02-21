@@ -23,9 +23,7 @@
             android:orientation="horizontal">
 
             <RelativeLayout
-                android:layout_marginTop="35dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -37,6 +35,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:padding="10dp"
+                    android:layout_margin="15dp"
                     android:layout_gravity="left"
 
                     />
@@ -48,6 +47,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:padding="10dp"
+                    android:layout_margin="15dp"
                     android:layout_alignParentEnd="true"
                     android:src="@drawable/ic_menu_black_24dp"
                     />
@@ -433,7 +433,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="end"
         android:fitsSystemWindows="true"
-        android:background="#263238"
+        android:background="@color/bluedark"
 
         >
         <RelativeLayout
@@ -444,23 +444,27 @@
 
             <LinearLayout
                 android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
+
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
 
+
                     android:id="@+id/profile"
-                    android:background="@drawable/btnbackground_eight"
+                    android:background="@drawable/btnbackground_nine"
                     android:focusable="true"
                     android:clickable="true"
-                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <ImageView
-                        android:layout_margin="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/ic_person_white_24dp"
@@ -477,16 +481,20 @@
 
                 </LinearLayout>
                 <LinearLayout
+
                     android:id="@+id/share"
-                    android:background="@drawable/btnbackground_eight"
+                    android:background="@drawable/btnbackground_nine"
                     android:focusable="true"
                     android:clickable="true"
-                    android:layout_margin="10dp"
+                    android:padding="5dp"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <ImageView
-                        android:layout_margin="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/ic_menu_share"
@@ -504,16 +512,20 @@
                 </LinearLayout>
                 <LinearLayout
 
+
                     android:id="@+id/feedback"
-                    android:background="@drawable/btnbackground_eight"
+                    android:background="@drawable/btnbackground_nine"
                     android:focusable="true"
                     android:clickable="true"
-                    android:layout_margin="10dp"
+                    android:padding="5dp"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <ImageView
-                        android:layout_margin="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/ic_rss_feed_black_24dp"
@@ -531,16 +543,20 @@
                 </LinearLayout>
                 <LinearLayout
 
+
                     android:id="@+id/about"
-                    android:background="@drawable/btnbackground_eight"
+                    android:background="@drawable/btnbackground_nine"
                     android:focusable="true"
                     android:clickable="true"
-                    android:layout_margin="10dp"
+                    android:padding="5dp"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <ImageView
-                        android:layout_margin="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/ic_info_black_24dp"
@@ -558,15 +574,15 @@
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
+
                 android:id="@+id/signout"
-                android:background="@drawable/btnbackground_eight"
+                android:background="@drawable/btnbackground_nine"
                 android:focusable="true"
                 android:clickable="true"
                 android:layout_marginBottom="25dp"
                 android:layout_alignParentBottom="true"
                 android:gravity="bottom"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
+                android:padding="5dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">

@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,9 +46,10 @@ public class AskActivity extends AppCompatActivity {
 
     private Button saveBtn;
     private EditText nameETView, mobileETView;
-    private TextView dobSelectBtn,errorTextName,errorTextNumber;
+    private TextView dobSelectBtn,errorTextName,errorTextNumber,waitText;
     private DatePickerDialog datePickerDialog;
     private RelativeLayout layout;
+    private ProgressBar progressBar;
 
     /**
      * Firebase Stuffs Declaration
@@ -75,6 +77,9 @@ public class AskActivity extends AppCompatActivity {
         mobileETView = (EditText) findViewById(R.id.mobileNum);
         saveBtn = (Button) findViewById(R.id.saveBtn);
         layout  =(RelativeLayout)findViewById(R.id.layout);
+        progressBar = (ProgressBar)findViewById(R.id.progressBar);
+        waitText = (TextView)findViewById(R.id.wait);
+
 
 
         /**
@@ -218,6 +223,9 @@ public class AskActivity extends AppCompatActivity {
             TransitionManager.beginDelayedTransition(layout);
             errorTextName.setVisibility(View.GONE);
             errorTextNumber.setVisibility(View.GONE);
+            saveBtn.setVisibility(View.GONE);
+            progressBar.setVisibility(View.VISIBLE);
+            waitText.setVisibility(View.VISIBLE);
 
             nameETView.setBackground(getResources().getDrawable(R.drawable.editviewbackground_two));
             mobileETView.setBackground(getResources().getDrawable(R.drawable.editviewbackground_two));
@@ -231,6 +239,12 @@ public class AskActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
 
 
+                        TransitionManager.beginDelayedTransition(layout);
+                        progressBar.setVisibility(View.GONE);
+                        waitText.setVisibility(View.GONE);
+                        saveBtn.setVisibility(View.VISIBLE);
+
+
                         Toast.makeText(AskActivity.this, "Your data are successfully saved. Thank you.", Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(AskActivity.this, ChoicesActivity.class);
@@ -240,6 +254,11 @@ public class AskActivity extends AppCompatActivity {
 
 
                     } else {
+
+                        TransitionManager.beginDelayedTransition(layout);
+                        progressBar.setVisibility(View.GONE);
+                        waitText.setVisibility(View.GONE);
+                        saveBtn.setVisibility(View.VISIBLE);
 
                         Toast.makeText(AskActivity.this, "Failed to save your data. Please Try again later...", Toast.LENGTH_SHORT).show();
                     }

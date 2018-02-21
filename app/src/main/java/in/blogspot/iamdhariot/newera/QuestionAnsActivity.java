@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -35,7 +37,10 @@ public class QuestionAnsActivity extends AppCompatActivity implements View.OnCli
     private FirebaseDatabase mFireDB;
 
     private ImageButton nav_menu;
-    private LinearLayout profile,share,feedback,about,signout;
+    private LinearLayout profile,share,feedback,about,signout,layout;
+    private ProgressBar progressBar;
+    private TextView waitText;
+
 
 
     public int category;
@@ -58,6 +63,10 @@ public class QuestionAnsActivity extends AppCompatActivity implements View.OnCli
         feedback = (LinearLayout)findViewById(R.id.feedback);
         profile = (LinearLayout)findViewById(R.id.profile);
         signout = (LinearLayout)findViewById(R.id.signout);
+        progressBar = (ProgressBar)findViewById(R.id.progressBar);
+        waitText = (TextView)findViewById(R.id.wait);
+        layout = (LinearLayout)findViewById(R.id.layout);
+
 
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -184,6 +193,10 @@ public class QuestionAnsActivity extends AppCompatActivity implements View.OnCli
                     ListView questionListView = (ListView)findViewById(R.id.questionListView);
                     questionListView.setAdapter(adapter);
 
+                    TransitionManager.beginDelayedTransition(layout);
+                    progressBar.setVisibility(View.GONE);
+                    waitText.setVisibility(View.GONE);
+                    questionListView.setVisibility(View.VISIBLE);
 
 
                 }catch (Exception e){

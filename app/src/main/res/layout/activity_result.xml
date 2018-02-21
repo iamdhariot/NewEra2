@@ -23,9 +23,7 @@
         android:orientation="horizontal">
 
         <RelativeLayout
-            android:layout_marginTop="35dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -37,6 +35,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:padding="10dp"
+                android:layout_margin="15dp"
                 android:layout_alignParentEnd="true"
                 android:src="@drawable/ic_menu_black_24dp"
                 />
@@ -50,6 +49,8 @@
 
         <LinearLayout
 
+
+            android:id="@+id/layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -181,6 +182,7 @@
 
 
         </LinearLayout>
+
     </RelativeLayout>
 
 </LinearLayout>

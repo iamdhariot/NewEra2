@@ -99,6 +99,7 @@ public class ProfileActivity extends AppCompatActivity {
                 TransitionManager.beginDelayedTransition(layout);
                 progressBar.setVisibility(View.GONE);
                 waitText.setVisibility(View.GONE);
+                layout.setVisibility(View.VISIBLE);
                 name.setText(userData.getName());
                 email.setText(userData.getEmail());
                 dob.setText(userData.getDob());

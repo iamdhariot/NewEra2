@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,12 +38,13 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     /**
      *  UI Stuffs Declaration
      * */
-    private TextView signinTVext,errorTextEmail,errorTextPassword,errorTextPasswordRetype;
+    private TextView signinTVext,errorTextEmail,errorTextPassword,errorTextPasswordRetype,waitText;
     private EditText passwordETView,emailETView,passwordRetypeETView;
     private Button signupBtn;
 
     private RelativeLayout layout;
     private LinearLayout google;
+    private ProgressBar progressBar;
 
 
     /**
@@ -74,6 +76,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         passwordETView =(EditText)findViewById(R.id.passwordETView);
         passwordRetypeETView = (EditText)findViewById(R.id.passwordRetypeETView);
         signupBtn = (Button)findViewById(R.id.signupBtn);
+        progressBar = (ProgressBar)findViewById(R.id.progressBar);
+        waitText = (TextView)findViewById(R.id.wait);
+
 
 
         /**
@@ -317,12 +322,17 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
              * we will show our progress bar
              **/
             TransitionManager.beginDelayedTransition(layout);
+            signupBtn.setVisibility(View.GONE);
+            signinTVext.setVisibility(View.GONE);
+            progressBar.setVisibility(View.VISIBLE);
+            waitText.setVisibility(View.VISIBLE);
             errorTextPassword.setVisibility(View.GONE);
             errorTextEmail.setVisibility(View.GONE);
             errorTextPasswordRetype.setVisibility(View.GONE);
             emailETView.setBackground(getResources().getDrawable(R.drawable.editviewbackground_two));
             passwordETView.setBackground(getResources().getDrawable(R.drawable.editviewbackground_two));
             passwordRetypeETView.setBackground(getResources().getDrawable(R.drawable.editviewbackground_two));
+
 
 
 
@@ -339,6 +349,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                     }
                     else{
+                        TransitionManager.beginDelayedTransition(layout);
+                        progressBar.setVisibility(View.GONE);
+                        waitText.setVisibility(View.GONE);
+                        signupBtn.setVisibility(View.VISIBLE);
+                        signinTVext.setVisibility(View.VISIBLE);
+
                         Toast.makeText(SignUpActivity.this,"Could not register.Please try again ",Toast.LENGTH_SHORT).show();
 
                     }
@@ -360,11 +376,22 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                             Toast.LENGTH_SHORT).show();
 
 
+                    TransitionManager.beginDelayedTransition(layout);
+                    progressBar.setVisibility(View.GONE);
+                    waitText.setVisibility(View.GONE);
+                    signupBtn.setVisibility(View.VISIBLE);
+                    signinTVext.setVisibility(View.VISIBLE);
                     startActivity(new Intent(SignUpActivity.this,AskActivity.class));
-                    finish();
+                    finishAffinity();
 
 
                 }else{
+
+                    TransitionManager.beginDelayedTransition(layout);
+                    progressBar.setVisibility(View.GONE);
+                    waitText.setVisibility(View.GONE);
+                    signupBtn.setVisibility(View.VISIBLE);
+                    signinTVext.setVisibility(View.VISIBLE);
 
                     Toast.makeText(SignUpActivity.this,"Failed to send verification email.", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(SignUpActivity.this,AskActivity.class));
