@@ -329,9 +329,7 @@ public class QuestionBoardActivity extends AppCompatActivity implements View.OnC
 
         }
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
+
                 mDBReference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
@@ -416,8 +414,8 @@ public class QuestionBoardActivity extends AppCompatActivity implements View.OnC
                 });
 
 
-            }
-        },1500);
+
+
 
 
 

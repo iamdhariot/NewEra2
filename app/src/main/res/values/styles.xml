@@ -19,6 +19,9 @@
 
 
     </style>
+    <style name="splashScreenTheme" parent="noActionbarFullScreen">
+        <item name="android:windowBackground">@color/black</item>
+    </style>
 
     <style name="noActionbarFullScreen.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
