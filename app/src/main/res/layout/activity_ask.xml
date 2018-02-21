@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@mipmap/sign_in_background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AskActivity"
+    >
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        >
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView"
+                    android:text="Profile setup"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:textSize="30sp"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/lightGray"
+
+                    />
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/lightGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:text="I get smarter the more you tell about you and feel free to give feedback because that is help me to improve it. "
+                    />
+
+
+                <EditText
+
+                    android:textColor="@color/lightGray"
+                    android:id="@+id/nameETView"
+                    android:background="@drawable/editviewbackground_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="15dp"
+                    android:fontFamily="monospace"
+                    android:hint="Full name"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="@color/lightGray"
+                    android:drawablePadding="20dp"
+                    android:drawableStart="@drawable/ic_person_white_24dp"
+
+                    />
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/errorTextName"
+                    android:text="@string/error_field_required"
+                    android:fontFamily="monospace"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:layout_marginBottom="10dp"
+                    />
+                <EditText
+
+                    android:textColor="@color/lightGray"
+                    android:inputType="phone"
+                    android:fontFamily="monospace"
+                    android:id="@+id/mobileNum"
+                    android:background="@drawable/editviewbackground_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="15dp"
+                    android:text=""
+                    android:hint="Mobile number"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="@color/lightGray"
+                    android:drawablePadding="20dp"
+                    android:drawableStart="@drawable/ic_phone_black_24dp"
+                    />
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/errorTextNumber"
+                    android:text="@string/error_field_required"
+                    android:fontFamily="monospace"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:textColor="@color/lightGray"
+                    android:id="@+id/dobSelect"
+                    android:fontFamily="monospace"
+                    android:background="@drawable/editviewbackground_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="15dp"
+                    android:hint="Date of birth"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="@color/lightGray"
+                    android:drawablePadding="20dp"
+                    android:drawableStart="@drawable/ic_date_range_black_24dp"
+
+                    />
+
+
+
+
+
+
+
+                <Button
+                    android:id="@+id/saveBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/btnbackground"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:minWidth="300dp"
+                    android:padding="10dp"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blue"
+                    android:textSize="20sp"
+                    />
+
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>
