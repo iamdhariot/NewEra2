@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">NewEra</string>
+    <string name="signin_email">Sign in with your email address</string>
+    <string name="signin_withFb">Sign in with Facebook</string>
+    <string name="create_newAccount">Create a new account</string>
+    <string name="signin_gmail">Sign in with Gmail</string>
+    <string name="welcome_signin">Welcome Back. Please sign in</string>
+    <string name="signup_email">Sign up with email address</string>
+    <string name="signup_withFb">Sign up with Facebook</string>
+    <string name="signup_gmail">Sign up with Gmail</string>
+    <string name="sign_inAccount">Already have account? Sign in</string>
+    <string name="signin">Sign in</string>
+    <string name="signup">Create an account</string>
+    <string name="title_activity_nav">NavActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="Male">Male</string>
+    <string name="Female">Female</string>
+    <string name="aptitude">Aptitude</string>
+    <string name="reasoning">Reasoning</string>
+    <string name="programing">Programing</string>
+    <string name="all">All</string>
+    <string name="mixed">Mixed</string>
+    <string name="allmixed">All </string>
+
+    <!-- validations on the input views-->
+    <string name="error_invalid_mobilenumber">This mobile number is invalid.</string>
+
+    <string name="qans"><![CDATA[Questions & Answers]]></string>
+    <string name="error_field_required">This field is Required.</string>
+    <string name="error_invalid_email">Please enter valid Email.</string>
+    <string name="error_invalid_password">Please enter valid Password.</string>
+    <string name="error_invalid_passwordRetype">Password is not matched.</string>
+    <string name="error_invalid_fullname">Please enter valid Name.</string>
+    <string name="error_invalid_mobilenum">Please enter valid Mobile Number.</string>
+    <string name="questions_answer"><![CDATA[Questions & answer]]></string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>

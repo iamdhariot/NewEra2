@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TestCategoriesActivity"
+    android:id="@+id/drawer_layout"
+    android:background="@color/black"
+
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+   >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageButton
+                android:id="@+id/nav_menu"
+                android:background="@drawable/btnbackground_eight"
+                android:layout_centerVertical="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_menu_black_24dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:minWidth="200dp"
+                android:minHeight="200dp"
+                android:scaleType="centerCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/newera"
+                />
+            
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:id="@+id/marks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="Marks : "
+                android:textColor="@color/lightGray"
+                android:textSize="24sp" />
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:minWidth="300dp"
+                    android:layout_weight=".75"
+                    android:textSize="18sp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/lightGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:text="Total number of questions :"
+                    />
+                <TextView
+                    android:id="@+id/totalQuestions"
+                    android:textSize="18sp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/lightGray"
+                    android:layout_weight=".25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:text=""
+                    android:minWidth="30dp"
+                    
+                    />
+                
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:minWidth="300dp"
+                    android:layout_weight=".75"
+                    android:textSize="18sp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/lightGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total number of answered questions :"
+                    />
+                <TextView
+                    android:id="@+id/totalAnswered"
+                    android:textSize="18sp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/lightGray"
+                    android:layout_weight=".25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:minWidth="30dp"
+
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:minWidth="300dp"
+                    android:layout_weight=".75"
+                    android:textSize="18sp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/lightGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total number of unanswered questions :"
+
+                    />
+                <TextView
+                    android:id="@+id/totalUnAnswered"
+                    android:textSize="18sp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/lightGray"
+                    android:layout_weight=".25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:minWidth="30dp"
+
+                    />
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/answerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:background="@drawable/btnbackground_two"
+                android:textColor="@color/lightGray"
+                android:text="View answers"
+                />
+
+          
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+
+<android.support.design.widget.NavigationView
+android:id="@+id/nav_view"
+android:layout_width="wrap_content"
+android:layout_height="match_parent"
+android:layout_gravity="end"
+android:fitsSystemWindows="true"
+android:background="#263238"
+
+    >
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:id="@+id/profile"
+            android:background="@drawable/btnbackground_eight"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_person_white_24dp"
+                />
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:textColor="@color/lightGray"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/share"
+            android:background="@drawable/btnbackground_eight"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_menu_share"
+                />
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:textColor="@color/lightGray"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+
+            android:id="@+id/feedback"
+            android:background="@drawable/btnbackground_eight"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_rss_feed_black_24dp"
+                />
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:textColor="@color/lightGray"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Feedback"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+
+            android:id="@+id/about"
+            android:background="@drawable/btnbackground_eight"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_info_black_24dp"
+                />
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:textColor="@color/lightGray"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/signout"
+        android:background="@drawable/btnbackground_eight"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/rotatesign_out_icon"
+            />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:textColor="@color/lightGray"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Out"
+            />
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+</android.support.design.widget.NavigationView>
+    </android.support.v4.widget.DrawerLayout>
+
+
