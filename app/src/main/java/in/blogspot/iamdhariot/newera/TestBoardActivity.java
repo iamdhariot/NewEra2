@@ -45,7 +45,8 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
     private ImageButton arrowBackBtn;
     private CheckBox checkBoxA,checkBoxB,checkBoxC,checkBoxD;
     private ImageButton nav_menu;
-    private LinearLayout profile,share,feedback,about,signout;
+    private LinearLayout profile,share,feedback,about,signout,startTestLayout;
+    private Button startTest;
 
 
 
@@ -78,12 +79,11 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
 
     public String answer="";
 
-
     /**
      * For count down
-     * 600000*2 = 20 mins
+     * 600000*3 = 30 mins
      * */
-    private  static  final  long START_TIME_IN_MILLIS = 600000*2;
+    private  static  final  long START_TIME_IN_MILLIS = 600000*3;
     private CountDownTimer mCountDownTimer;
     private Long mTimeLeftMillis = START_TIME_IN_MILLIS;
 
@@ -125,6 +125,8 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
         feedback = (LinearLayout)findViewById(R.id.feedback);
         profile = (LinearLayout)findViewById(R.id.profile);
         signout = (LinearLayout)findViewById(R.id.signout);
+        startTest = (Button)findViewById(R.id.startTest);
+        startTestLayout = (LinearLayout)findViewById(R.id.startTestLayout);
 
 
 
@@ -156,7 +158,7 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(mAuth.getCurrentUser()!=null){
                     // user already signed up
-                    updateQuestion();
+
 
                 }else{
                     // user is not signed in
@@ -174,7 +176,7 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
 
 
         updateCountDownText();
-        startTimer();
+
         checkBoxA.setOnClickListener(this);
         checkBoxB.setOnClickListener(this);
         checkBoxC.setOnClickListener(this);
@@ -188,7 +190,7 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
         profile.setOnClickListener(this);
         signout.setOnClickListener(this);
         arrowBackBtn.setOnClickListener(this);
-        arrowBackBtn.setOnClickListener(this);
+        startTest.setOnClickListener(this);
 
 
     }
@@ -234,7 +236,7 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
             case R.id.checkboxA:
                 if(choice1.getText().equals(answer)){
 
-                    Toast.makeText(TestBoardActivity.this,"Correct",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(TestBoardActivity.this,"Correct",Toast.LENGTH_SHORT).show();
                     answered = answered+1;
                     correct = correct+1;
                     mScore  = mScore+1;
@@ -243,7 +245,7 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
 
 
                 }else{
-                    Toast.makeText(TestBoardActivity.this,"Wrong",Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(TestBoardActivity.this,"Wrong",Toast.LENGTH_SHORT).show();
                     answered = answered+1;
                     wrong = wrong+1;
                     mQuestionNumber+=1;
@@ -257,7 +259,7 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
             case R.id.checkboxB:
                 if(choice2.getText().equals(answer)){
 
-                    Toast.makeText(TestBoardActivity.this,"Correct",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(TestBoardActivity.this,"Correct",Toast.LENGTH_SHORT).show();
                     answered = answered+1;
                     correct = correct+1;
                     mScore  = mScore+1;
@@ -265,7 +267,7 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
                     updateQuestion();
 
                 }else{
-                    Toast.makeText(TestBoardActivity.this,"Wrong",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(TestBoardActivity.this,"Wrong",Toast.LENGTH_SHORT).show();
                     answered = answered+1;
                     wrong = wrong+1;
                     mQuestionNumber+=1;
@@ -279,7 +281,7 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
             case R.id.checkboxC:
                 if(choice3.getText().equals(answer)){
 
-                    Toast.makeText(TestBoardActivity.this,"Correct",Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(TestBoardActivity.this,"Correct",Toast.LENGTH_SHORT).show();
                     answered = answered+1;
                     correct = correct+1;
                     mScore  = mScore+1;
@@ -287,7 +289,7 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
                     updateQuestion();
 
                 }else{
-                    Toast.makeText(TestBoardActivity.this,"Wrong",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(TestBoardActivity.this,"Wrong",Toast.LENGTH_SHORT).show();
                     answered = answered+1;
                     wrong = wrong+1;
                     mQuestionNumber+=1;
@@ -302,13 +304,13 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
             case R.id.checkboxD:
                 if(choice4.getText().equals(answer)){
 
-                    Toast.makeText(TestBoardActivity.this,"Correct",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(TestBoardActivity.this,"Correct",Toast.LENGTH_SHORT).show();
                     answered = answered+1;
                     mQuestionNumber+=1;
                     updateQuestion();
 
                 }else{
-                    Toast.makeText(TestBoardActivity.this,"Wrong",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(TestBoardActivity.this,"Wrong",Toast.LENGTH_SHORT).show();
                     answered = answered+1;
                     mQuestionNumber+=1;
                     updateQuestion();
@@ -374,6 +376,14 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
                     finish();
                 }
                 break;
+
+            case R.id.startTest:
+                TransitionManager.beginDelayedTransition(layout);
+                startTimer();
+                updateQuestion();
+                startTestLayout.setVisibility(View.GONE);
+                progressBar1.setVisibility(View.VISIBLE);
+                waitText.setVisibility(View.VISIBLE);
 
 
 
@@ -485,9 +495,11 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
+
                 try {
                     // reading data from database
                     QuizQuestion mQuestion = new QuizQuestion();
+
                     mQuestion.setQuestion(dataSnapshot.child("test").child(questionCategory).child("" + mQuestionNumber + "").getValue(QuizQuestion.class).getQuestion());
                     // for button option
                     mQuestion.setChoice1(dataSnapshot.child("test").child(questionCategory).child("" + mQuestionNumber + "").getValue(QuizQuestion.class).getChoice1());
@@ -495,6 +507,8 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
                     mQuestion.setChoice3(dataSnapshot.child("test").child(questionCategory).child("" + mQuestionNumber + "").getValue(QuizQuestion.class).getChoice3());
                     mQuestion.setChoice4(dataSnapshot.child("test").child(questionCategory).child("" + mQuestionNumber + "").getValue(QuizQuestion.class).getChoice4());
                     mQuestion.setAnswer(dataSnapshot.child("test").child(questionCategory).child("" + mQuestionNumber + "").getValue(QuizQuestion.class).getAnswer());
+
+
 
                     //setting question data on UI stuffs
                     questionNumText.setText("Q." + (mQuestionNumber + 1) + ".");
@@ -554,7 +568,7 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
 
                         Intent i = new Intent(TestBoardActivity.this, ResultActivity.class);
                         i.putExtra("score", "" + mScore);
-                        i.putExtra("question", "" + (mQuestionNumber + 1));
+                        i.putExtra("question", "" + (answered+unAnswered));
                         i.putExtra("answered", "" + answered);
                         i.putExtra("unanswered", "" + unAnswered);
                         i.putExtra("category", "" + category);
