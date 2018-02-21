@@ -147,8 +147,10 @@ public class TestCategoriesActivity extends AppCompatActivity implements View.On
                     startActivity(intent);
                 break;
             case R.id.about :
+                startActivity(new Intent(TestCategoriesActivity.this,AboutActivity.class));
                 break;
             case R.id.profile :
+                startActivity(new Intent(TestCategoriesActivity.this,ProfileActivity.class));
                 break;
             case R.id.signout :
                 mAuth.signOut();

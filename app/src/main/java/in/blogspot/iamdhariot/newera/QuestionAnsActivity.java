@@ -248,8 +248,10 @@ public class QuestionAnsActivity extends AppCompatActivity implements View.OnCli
                 startActivity(intent);
             break;
         case R.id.about :
+            startActivity(new Intent(QuestionAnsActivity.this,AboutActivity.class));
             break;
         case R.id.profile :
+            startActivity(new Intent(QuestionAnsActivity.this,ProfileActivity.class));
             break;
         case R.id.signout :
             mAuth.signOut();

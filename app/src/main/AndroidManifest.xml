@@ -40,7 +40,8 @@
         <activity android:name=".CheckDatabaseHaveUserData" />
         <activity android:name=".ChoicesActivity" />
         <activity android:name=".TestBoardActivity" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>

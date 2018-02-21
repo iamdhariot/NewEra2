@@ -218,8 +218,10 @@ public class TestProgramingCataActivity extends AppCompatActivity implements Vie
                     startActivity(intent);
                 break;
             case R.id.about :
+                startActivity(new Intent(TestProgramingCataActivity.this,AboutActivity.class));
                 break;
             case R.id.profile :
+                startActivity(new Intent(TestProgramingCataActivity.this,ProfileActivity.class));
                 break;
             case R.id.signout :
                 mAuth.signOut();

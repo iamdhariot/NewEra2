@@ -153,8 +153,10 @@ public class ChoicesActivity extends AppCompatActivity implements View.OnClickLi
                     startActivity(intent);
                 break;
             case R.id.about :
+                startActivity(new Intent(ChoicesActivity.this,AboutActivity.class));
                 break;
             case R.id.profile :
+                startActivity(new Intent(ChoicesActivity.this,ProfileActivity.class));
                 break;
                 case R.id.signout :
                     mAuth.signOut();

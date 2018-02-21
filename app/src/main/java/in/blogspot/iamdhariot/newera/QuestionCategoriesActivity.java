@@ -155,8 +155,10 @@ public class QuestionCategoriesActivity extends AppCompatActivity implements Vie
                     startActivity(intent);
                 break;
             case R.id.about :
+                startActivity(new Intent(QuestionCategoriesActivity.this,AboutActivity.class));
                 break;
             case R.id.profile :
+                startActivity(new Intent(QuestionCategoriesActivity.this,ProfileActivity.class));
                 break;
             case R.id.signout :
                 mAuth.signOut();

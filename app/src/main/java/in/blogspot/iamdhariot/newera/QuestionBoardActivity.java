@@ -217,8 +217,10 @@ public class QuestionBoardActivity extends AppCompatActivity implements View.OnC
                     startActivity(intent);
                 break;
             case R.id.about :
+                startActivity(new Intent(QuestionBoardActivity.this,AboutActivity.class));
                 break;
             case R.id.profile :
+                startActivity(new Intent(QuestionBoardActivity.this,ProfileActivity.class));
                 break;
             case R.id.signout :
                 mAuth.signOut();

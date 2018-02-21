@@ -210,8 +210,10 @@ public class QuestionProgramingCataActivity extends AppCompatActivity implements
                     startActivity(intent);
                 break;
             case R.id.about :
+                startActivity(new Intent(QuestionProgramingCataActivity.this,AboutActivity.class));
                 break;
             case R.id.profile :
+                startActivity(new Intent(QuestionProgramingCataActivity.this,ProfileActivity.class));
                 break;
             case R.id.signout :
                 mAuth.signOut();

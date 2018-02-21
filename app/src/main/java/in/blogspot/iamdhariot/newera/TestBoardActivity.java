@@ -354,8 +354,10 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
                     startActivity(intent);
                 break;
             case R.id.about :
+                startActivity(new Intent(TestBoardActivity.this,AboutActivity.class));
                 break;
             case R.id.profile :
+                startActivity(new Intent(TestBoardActivity.this,ProfileActivity.class));
                 break;
             case R.id.signout :
                 mAuth.signOut();

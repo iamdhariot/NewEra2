@@ -165,8 +165,10 @@ public class ResultActivity extends AppCompatActivity  implements View.OnClickLi
                 startActivity(intent);
             break;
         case R.id.about :
+            startActivity(new Intent(ResultActivity.this,AboutActivity.class));
             break;
         case R.id.profile :
+            startActivity(new Intent(ResultActivity.this,ProfileActivity.class));
             break;
         case R.id.signout :
             mAuth.signOut();
