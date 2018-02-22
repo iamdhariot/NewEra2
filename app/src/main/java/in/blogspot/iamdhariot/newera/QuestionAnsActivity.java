@@ -114,7 +114,7 @@ public class QuestionAnsActivity extends AppCompatActivity implements View.OnCli
 
         if(category==1){
             questionType="( Mixed )";
-            questionCategory = "mix";
+            questionCategory = "all";
 
         }else if(category==2){
             questionType="( Aptitude )";
@@ -134,7 +134,7 @@ public class QuestionAnsActivity extends AppCompatActivity implements View.OnCli
 
         }else if(category==6){
             questionType="( C# )";
-            questionCategory ="cSharp";
+            questionCategory ="csharp";
 
         }else if(category==7){
             questionType="( CSS )";

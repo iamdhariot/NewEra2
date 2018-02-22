@@ -54,14 +54,7 @@ public class CheckDatabaseHaveUserData extends Activity {
         wait = (TextView)findViewById(R.id.wait);
 
 
-        /**
-         *  UI Stuffs animation
-         * */
-
-        progressBar.startAnimation(AnimationUtils.loadAnimation(this,R.anim.textview_anim_bottom_up));
-        logo.startAnimation(AnimationUtils.loadAnimation(this,R.anim.textview_anim_up_bottom));
-        wait.startAnimation(AnimationUtils.loadAnimation(this,R.anim.textview_anim_bottom_up));
-
+       
         checkData();
 
 

@@ -5,7 +5,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@mipmap/sign_in_background"
+    android:background="@mipmap/background"
     tools:context=".QuestionCategoriesActivity"
     android:id="@+id/drawer_layout"
 
@@ -69,6 +69,8 @@
 
             <TextView
 
+
+                android:padding="2dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="30dp"
@@ -79,7 +81,7 @@
                 android:fontFamily="monospace"
                 android:text="Please select your questions category."
                 android:textColor="@color/lightGray"
-                android:textSize="24sp" />
+                android:textSize="23sp" />
 
             <Button
 
@@ -97,6 +99,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/lightGray"
                 android:textSize="20sp"
+                android:textStyle="bold"
                 />
             <Button
 
@@ -110,6 +113,7 @@
                 android:gravity="center"
                 android:minWidth="300dp"
                 android:padding="10dp"
+                android:textStyle="bold"
                 android:text="@string/aptitude"
                 android:textAllCaps="false"
                 android:textColor="@color/lightGray"
@@ -131,6 +135,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/lightGray"
                 android:textSize="20sp"
+                android:textStyle="bold"
                 />
             <Button
 
@@ -146,6 +151,7 @@
                 android:padding="10dp"
                 android:text="@string/programing"
                 android:textAllCaps="false"
+                android:textStyle="bold"
                 android:textColor="@color/lightGray"
                 android:textSize="20sp"
                 />

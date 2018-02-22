@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="in.blogspot.iamdhariot.newera.QuestionAnsActivity"
     android:id="@+id/drawer_layout"
-    android:background="@color/black"
+    android:background="@color/skyblue"
 
     >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -39,7 +39,7 @@
                 android:padding="10dp"
                 android:layout_margin="15dp"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/ic_menu_black_24dp"
+                android:src="@drawable/ic_menu_white_24dp"
                 />
         </RelativeLayout>
     </LinearLayout>

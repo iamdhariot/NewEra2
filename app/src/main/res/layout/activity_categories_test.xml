@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".TestCategoriesActivity"
     android:id="@+id/drawer_layout"
-    android:background="@mipmap/sign_in_background"
+    android:background="@mipmap/background"
 
     > <LinearLayout
     android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             <ImageButton
                 android:id="@+id/backArrowBtn"
                 android:background="@drawable/btnbackground_eight"
-                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:src="@drawable/ic_arrow_back_white_24dp"
                 android:layout_centerVertical="true"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -48,7 +48,7 @@
                 android:padding="10dp"
                 android:layout_margin="15dp"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/ic_menu_black_24dp"
+                android:src="@drawable/ic_menu_white_24dp"
                 />
         </RelativeLayout>
     </LinearLayout>
@@ -75,12 +75,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
+                android:textStyle="bold"
                 android:text="Please select your online test category."
                 android:textColor="@color/lightGray"
                 android:textSize="24sp" />
 
             <Button
 
+                android:textStyle="bold"
                 android:id="@+id/allMixed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -98,6 +100,7 @@
                 />
             <Button
 
+                android:textStyle="bold"
                 android:id="@+id/aptitude"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -115,6 +118,7 @@
                 />
             <Button
 
+                android:textStyle="bold"
                 android:id="@+id/reasoning"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -132,6 +136,7 @@
                 />
             <Button
 
+                android:textStyle="bold"
                 android:id="@+id/programing"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

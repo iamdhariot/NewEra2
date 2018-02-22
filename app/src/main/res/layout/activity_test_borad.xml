@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".TestBoardActivity"
     android:id="@+id/drawer_layout"
-    android:background="@color/black"
+    android:background="@color/skyblue"
 
     >
 <LinearLayout
@@ -77,6 +77,8 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
                         android:textSize="18sp"
                         android:padding="10dp"
                         android:text="Time Left :"
@@ -87,11 +89,13 @@
                         />
                     <TextView
 
+                        android:layout_marginTop="10dp"
                         android:id="@+id/timeLeft"
                         android:textStyle="bold"
+                        android:gravity="center"
                         android:textSize="18sp"
                         android:padding="10dp"
-                        android:text=""
+                        android:text="00:30:00"
                         android:textColor="@color/red"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -108,7 +112,7 @@
                         android:padding="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/lightGray"
+                        android:textColor="@color/black"
                         android:text="Q.1."
                         android:textSize="20sp"
                         android:layout_marginLeft="5dp"
@@ -124,7 +128,7 @@
 
 
                         android:padding="10dp"
-                        android:textColor="@color/lightGray"
+                        android:textColor="@color/black"
                         android:textSize="20sp" />
                 </LinearLayout>
                 <TextView
@@ -138,7 +142,7 @@
                     android:layout_marginLeft="14dp"
                     android:padding="10dp"
                     android:text="(C Questions)"
-                    android:textColor="@color/blue"
+                    android:textColor="@color/bluedark"
                     android:textSize="16sp" />
                 <LinearLayout
 
@@ -157,7 +161,7 @@
                             android:id="@+id/checkboxA"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:buttonTint="@color/lightGray"
+                            android:buttonTint="@color/black"
 
 
                             />
@@ -171,7 +175,7 @@
                             android:focusable="true"
                             android:padding="12dp"
                             android:text="A."
-                            android:textColor="@color/lightGray"
+                            android:textColor="@color/black"
                             android:textSize="16sp"
 
 
@@ -189,7 +193,7 @@
                             android:focusable="true"
                             android:padding="12dp"
                             android:text="Sunday"
-                            android:textColor="@color/lightGray"
+                            android:textColor="@color/black"
                             android:textSize="16sp"
 
 
@@ -210,7 +214,7 @@
                             android:id="@+id/checkboxB"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:buttonTint="@color/lightGray"
+                            android:buttonTint="@color/black"
 
 
                             />
@@ -224,7 +228,7 @@
                             android:focusable="true"
                             android:padding="12dp"
                             android:text="B."
-                            android:textColor="@color/lightGray"
+                            android:textColor="@color/black"
                             android:textSize="16sp"
 
 
@@ -240,7 +244,7 @@
                             android:focusable="true"
                             android:padding="12dp"
                             android:text="Saturday"
-                            android:textColor="@color/lightGray"
+                            android:textColor="@color/black"
                             android:textSize="16sp"
 
                             />
@@ -260,7 +264,7 @@
                             android:id="@+id/checkboxC"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:buttonTint="@color/lightGray"
+                            android:buttonTint="@color/black"
 
 
                             />
@@ -274,7 +278,7 @@
                             android:focusable="true"
                             android:padding="12dp"
                             android:text="C."
-                            android:textColor="@color/lightGray"
+                            android:textColor="@color/black"
                             android:textSize="16sp"
 
 
@@ -290,7 +294,7 @@
                             android:focusable="true"
                             android:padding="12dp"
                             android:text="Friday"
-                            android:textColor="@color/lightGray"
+                            android:textColor="@color/black"
                             android:textSize="16sp"
 
                             />
@@ -310,7 +314,7 @@
                             android:id="@+id/checkboxD"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:buttonTint="@color/lightGray"
+                            android:buttonTint="@color/black"
 
 
                             />
@@ -324,7 +328,7 @@
                             android:focusable="true"
                             android:padding="12dp"
                             android:text="D."
-                            android:textColor="@color/lightGray"
+                            android:textColor="@color/black"
                             android:textSize="16sp"
 
 
@@ -340,7 +344,7 @@
                             android:focusable="true"
                             android:padding="12dp"
                             android:text="Wednesday"
-                            android:textColor="@color/lightGray"
+                            android:textColor="@color/black"
                             android:textSize="16sp"
 
                             />
@@ -415,7 +419,7 @@
                     android:padding="10dp"
                     android:layout_margin="10dp"
                     android:textSize="20sp"
-                    android:textColor="@color/green"
+                    android:textColor="@color/greenLight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Instructions:"
@@ -427,7 +431,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:textSize="18sp"
-                    android:textColor="@color/lightGray"
+                    android:textColor="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
@@ -441,7 +445,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginLeft="20dp"
                     android:textSize="18sp"
-                    android:textColor="@color/lightGray"
+                    android:textColor="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="- Time alloted : 30 minutes"
@@ -454,7 +458,7 @@
                     android:layout_marginRight="20dp"
 
                     android:textSize="18sp"
-                    android:textColor="@color/lightGray"
+                    android:textColor="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="- Each questions carry 1 mark,\n\t\t no negative marks."
@@ -468,7 +472,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginLeft="20dp"
                     android:textSize="18sp"
-                    android:textColor="@color/lightGray"
+                    android:textColor="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="- DO NOT back the page."
@@ -480,7 +484,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginLeft="20dp"
                     android:textSize="18sp"
-                    android:textColor="@color/lightGray"
+                    android:textColor="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="- All the best :-)"

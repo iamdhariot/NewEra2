@@ -438,7 +438,7 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
 
         if (category == 1) {
             questionType.setText("( Mixed )");
-            questionCategory = "mix";
+            questionCategory = "all";
 
         } else if (category == 2) {
             questionType.setText("( Aptitude )");
@@ -458,7 +458,7 @@ public class TestBoardActivity extends AppCompatActivity implements View.OnClick
 
         } else if (category == 6) {
             questionType.setText("( C# )");
-            questionCategory = "cSharp";
+            questionCategory = "csharp";
 
         } else if (category == 7) {
             questionType.setText("( CSS )");
